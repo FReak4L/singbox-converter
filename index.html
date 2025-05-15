@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تبدیل کانفیگ به Sing-Box - NotePadVPN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>تبدیل‌کننده کانفیگ به Sing-Box</h1>
+            <p>توسعه داده شده توسط <a href="https://t.me/NotePadVPN" target="_blank">NotePadVPN (@NotePadVPN)</a></p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'converter')">تبدیل</button>
+            <button class="tab-button" onclick="openTab(event, 'saved')">کانفیگ‌های ذخیره شده</button>
+            <button class="tab-button" onclick="openTab(event, 'about')">درباره ما</button>
+        </div>
+
+        <div id="converter" class="tab-content active">
+            <main>
+                <section id="input-section">
+                    <h2>ورودی لینک پروکسی یا لینک اشتراک</h2>
+                    <textarea id="inputLinks" rows="5" placeholder="هر لینک در یک خط جدید وارد شود (vless://, vmess://, hysteria2://, http(s)://)"></textarea>
+                    <input type="text" id="configName" placeholder="نام دلخواه برای کانفیگ (اختیاری)">
+                </section>
+
+                <section id="actions">
+                    <button id="convertBtn">تبدیل به کانفیگ Sing-Box</button>
+                </section>
+
+                <section id="output-section">
+                    <h2>خروجی کانفیگ Sing-Box (JSON)</h2>
+                    <textarea id="outputConfig" rows="15" readonly placeholder="کانفیگ تولید شده در اینجا نمایش داده می‌شود..."></textarea>
+                    <div class="output-buttons">
+                        <button id="copyBtn" disabled>کپی کانفیگ</button>
+                        <button id="downloadBtn" disabled>دانلود کانفیگ</button>
+                        <button id="saveConfigBtn" disabled>ذخیره کانفیگ</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <div id="saved" class="tab-content">
+            <h2>کانفیگ‌های ذخیره شده</h2>
+            <div id="savedConfigsList">
+                <p>هیچ کانفیگی ذخیره نشده است.</p>
+            </div>
+        </div>
+
+        <div id="about" class="tab-content">
+            <h2>درباره ما</h2>
+            <p>این ابزار برای تبدیل لینک‌های پروکسی VLESS، VMess و Hysteria2 به فرمت کانفیگ Sing-Box طراحی شده است.</p>
+            <p>این ابزار تلاش می‌کند تا بهینه‌ترین کانفیگ ممکن را با در نظر گرفتن تنظیمات مناسب برای کاربران ایرانی تولید کند.</p>
+            <p><strong>توسعه‌دهنده:</strong> NotePadVPN</p>
+            <p><strong>تلگرام:</strong> <a href="https://t.me/NotePadVPN" target="_blank">@NotePadVPN</a></p>
+            <p><strong>نسخه:</strong> 1.0.0</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 NotePadVPN. تمامی حقوق محفوظ است.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
